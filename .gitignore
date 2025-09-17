@@ -1,0 +1,85 @@
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb_convert/
+.notebooks/
+
+# ------------------------
+# Data
+# ------------------------
+# Raw/processed data (keep in local only)
+data/
+datasets/
+input/
+output/
+
+# Models
+models/
+checkpoints/
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.joblib
+*.pkl
+
+# Large files (can be managed with DVC or Git LFS instead)
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.xls*
+*.sqlite
+*.db
+
+# ------------------------
+# Logs & Reports
+# ------------------------
+*.log
+*.out
+*.err
+logs/
+reports/
+mlruns/            # MLflow experiments
+wandb/             # Weights & Biases logs
+
+# ------------------------
+# Config / Secrets
+# ------------------------
+.env
+.env.*
+*.json
+*.yaml
+*.yml
+
+# ------------------------
+# Editors / IDE
+# ------------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ------------------------
+# OS files
+# ------------------------
+.DS_Store
+Thumbs.db

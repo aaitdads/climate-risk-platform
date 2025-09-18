@@ -69,21 +69,21 @@ Open-Meteo API → free, no key needed.
 Never commit your .env file (it’s ignored by .gitignore).
 
 ## 🚀 Usage: Fetch data
-1. # Live forecast from Open-Meteo
+### 1. Live forecast from Open-Meteo
 ```bash
 python src/crp/data/fetch_openmeteo.py --lat 48.8566 --lon 2.3522 --name paris
 ```
-2. # Historical data from Meteostat
+### 2. Historical data from Meteostat
 ```bash
 python src/crp/data/fetch_meteostat.py --lat 48.8566 --lon 2.3522 \
   --start 2024-01-01 --end 2024-12-31 --name paris --granularity both
 ```
-3. # Preprocess into clean CSVs
+### 3. Preprocess into clean CSVs
 ```bash
 python src/crp/data/preprocess.py --source openmeteo --file data/raw/open_meteo/paris_openmeteo_*.json --name paris_live
 python src/crp/data/preprocess.py --source meteostat --file data/raw/meteostat/paris_meteostat_*.json --name paris_hist
 ```
-4. # Run EDA
+### 4. Run EDA
 
 Open the notebook:
 ```bash
@@ -100,19 +100,19 @@ jupyter notebook notebooks/01_eda.ipynb
 
 # 🛠️ Roadmap
 
- - Setup repo & environment
+ 1. Setup repo & environment
 
- - Fetch Meteostat + Open-Meteo data
+ 2. Fetch Meteostat + Open-Meteo data
 
- - Preprocessing pipeline
+ 3. Preprocessing pipeline
 
- - EDA (historical vs live)
+ 4. EDA (historical vs live)
 
- - Risk modeling (climate anomalies, heatwaves, floods)
+ 5. Risk modeling (climate anomalies, heatwaves, floods)
 
- - Dashboard (Streamlit / Dash)
+ 6. Dashboard (Streamlit / Dash)
 
- - Deployment
+ 7. Deployment
 
 # 👤 Author & Contact
 

@@ -46,45 +46,52 @@ climate-risk-platform/
 ```bash
 git clone https://github.com/aaitdads/climate-risk-platform.git
 cd climate-risk-platform
-
-2. Create environment
+```
+### 2. Create environment
+```bash
 conda env create -f environment.yml
 conda activate climate-risk
-
-3. Register environment for Jupyter
+```
+### 3. Register environment for Jupyter
+```bash
 python -m ipykernel install --user --name=climate-risk --display-name "Python (climate-risk)"
+```
 
-🔑 API Keys
+### 🔑 API Keys
 
 Meteostat API (via RapidAPI) → put in .env as:
-
+```bash
 RAPIDAPI_KEY=your_key_here
-
+```
 
 Open-Meteo API → free, no key needed.
 
 Never commit your .env file (it’s ignored by .gitignore).
 
-🚀 Usage
+## 🚀 Usage
+
 Fetch data
 # Live forecast from Open-Meteo
+```bash
 python src/crp/data/fetch_openmeteo.py --lat 48.8566 --lon 2.3522 --name paris
-
+```
 # Historical data from Meteostat
+```bash
 python src/crp/data/fetch_meteostat.py --lat 48.8566 --lon 2.3522 \
   --start 2024-01-01 --end 2024-12-31 --name paris --granularity both
-
-Preprocess into clean CSVs
+```
+# Preprocess into clean CSVs
+```bash
 python src/crp/data/preprocess.py --source openmeteo --file data/raw/open_meteo/paris_openmeteo_*.json --name paris_live
 python src/crp/data/preprocess.py --source meteostat --file data/raw/meteostat/paris_meteostat_*.json --name paris_hist
-
-Run EDA
+```
+# Run EDA
 
 Open the notebook:
 
 jupyter notebook notebooks/01_eda.ipynb
 
-📊 Example Outputs
+# 📊 Example Outputs
 
 Historical Analysis: Long-term temperature and precipitation trends.
 
@@ -92,7 +99,7 @@ Live Forecast: Next 24h temperature and humidity predictions.
 
 (plots will be added here)
 
-🛠️ Roadmap
+# 🛠️ Roadmap
 
  Setup repo & environment
 
@@ -108,14 +115,14 @@ Live Forecast: Next 24h temperature and humidity predictions.
 
  Deployment
 
-👤 Author & Contact
+# 👤 Author & Contact
 
 AIT DADS AYMANE – Data Scientist
 
-🌐 LinkedIn
+🌐 LinkedIn : https://www.linkedin.com/in/aymane-ait-dads/
 
 📧 Aymane.Ait-dads@eurecom.fr
 
-🐙 GitHub
+🐙 GitHub : https://github.com/aaitdads
 
-If you find this project useful or want to collaborate, feel free to connect with me!
+# If you find this project useful or want to collaborate, feel free to connect with me!

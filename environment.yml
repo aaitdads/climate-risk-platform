@@ -1,0 +1,18 @@
+name: climate-risk
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - requests
+  - jupyter
+  - notebook
+  - ipykernel
+  - pip
+  - pip:
+      - python-dotenv
+

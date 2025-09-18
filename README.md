@@ -68,61 +68,60 @@ Open-Meteo API → free, no key needed.
 
 Never commit your .env file (it’s ignored by .gitignore).
 
-## 🚀 Usage
-
-Fetch data
-# Live forecast from Open-Meteo
+## 🚀 Usage: Fetch data
+1. # Live forecast from Open-Meteo
 ```bash
 python src/crp/data/fetch_openmeteo.py --lat 48.8566 --lon 2.3522 --name paris
 ```
-# Historical data from Meteostat
+2. # Historical data from Meteostat
 ```bash
 python src/crp/data/fetch_meteostat.py --lat 48.8566 --lon 2.3522 \
   --start 2024-01-01 --end 2024-12-31 --name paris --granularity both
 ```
-# Preprocess into clean CSVs
+3. # Preprocess into clean CSVs
 ```bash
 python src/crp/data/preprocess.py --source openmeteo --file data/raw/open_meteo/paris_openmeteo_*.json --name paris_live
 python src/crp/data/preprocess.py --source meteostat --file data/raw/meteostat/paris_meteostat_*.json --name paris_hist
 ```
-# Run EDA
+4. # Run EDA
 
 Open the notebook:
-
+```bash
 jupyter notebook notebooks/01_eda.ipynb
+```
 
 # 📊 Example Outputs
 
-Historical Analysis: Long-term temperature and precipitation trends.
+- Historical Analysis: Long-term temperature and precipitation trends.
 
-Live Forecast: Next 24h temperature and humidity predictions.
+- Live Forecast: Next 24h temperature and humidity predictions.
 
 (plots will be added here)
 
 # 🛠️ Roadmap
 
- Setup repo & environment
+ - Setup repo & environment
 
- Fetch Meteostat + Open-Meteo data
+ - Fetch Meteostat + Open-Meteo data
 
- Preprocessing pipeline
+ - Preprocessing pipeline
 
- EDA (historical vs live)
+ - EDA (historical vs live)
 
- Risk modeling (climate anomalies, heatwaves, floods)
+ - Risk modeling (climate anomalies, heatwaves, floods)
 
- Dashboard (Streamlit / Dash)
+ - Dashboard (Streamlit / Dash)
 
- Deployment
+ - Deployment
 
 # 👤 Author & Contact
 
-AIT DADS AYMANE – Data Scientist
+- AIT DADS AYMANE – Data Scientist
 
-🌐 LinkedIn : https://www.linkedin.com/in/aymane-ait-dads/
+- 🌐 LinkedIn : https://www.linkedin.com/in/aymane-ait-dads/
 
-📧 Aymane.Ait-dads@eurecom.fr
+- 📧 Aymane.Ait-dads@eurecom.fr
 
-🐙 GitHub : https://github.com/aaitdads
+- 🐙 GitHub : https://github.com/aaitdads
 
-# If you find this project useful or want to collaborate, feel free to connect with me!
+>  If you find this project useful or want to collaborate, feel free to connect with me!
